@@ -1,28 +1,28 @@
 const readlineSync = require("readline-sync");
 
-const Hwweight = 0.15;
-const Qweight = 0.35;
-const Tweight = 0.5;
-const Assignments = 3;
+const HW_WEIGHT = 0.15;
+const QUIZ_WEIGHT = 0.35;
+const TEST_WEIGHT = 0.5;
+const ASSIGNMENTS = 3;
 
-let Hw1 = Number(readlineSync.question("\nEnter three homework grades.\n"));
-let Hw2 = Number(readlineSync.question(""));
-let Hw3 = Number(readlineSync.question(""));
+let hw1 = Number(readlineSync.question("\nEnter three homework grades.\n"));
+let hw2 = Number(readlineSync.question(""));
+let hw3 = Number(readlineSync.question(""));
 
-let Q1 = Number(readlineSync.question("\nEnter three quiz grades.\n"));
-let Q2 = Number(readlineSync.question(""));
-let Q3 = Number(readlineSync.question(""));
+let q1 = Number(readlineSync.question("\nEnter three quiz grades.\n"));
+let q2 = Number(readlineSync.question(""));
+let q3 = Number(readlineSync.question(""));
 
-let T1 = Number(readlineSync.question("\nEnter three test grades.\n"));
-let T2 = Number(readlineSync.question(""));
-let T3 = Number(readlineSync.question(""));
+let t1 = Number(readlineSync.question("\nEnter three test grades.\n"));
+let t2 = Number(readlineSync.question(""));
+let t3 = Number(readlineSync.question(""));
 
-let Finalhw = ((Hw1 + Hw2 + Hw3) / Assignments) * Hwweight;
-let Finalq = ((Q1+ Q2 + Q3) / Assignments) * Qweight;
-let Finalt = ((T1 + T2+ T3) / Assignments) * Tweight;
+let finalHw = ((hw1 + hw2 + hw3) / ASSIGNMENTS) * HW_WEIGHT ;
+let finalQ = ((q1+ q2 + q3) / ASSIGNMENTS) * QUIZ_WEIGHT;
+let finalT = ((t1 + t2+ t3) / ASSIGNMENTS) * TEST_WEIGHT;
 
-let Mpgrade = (Finalhw + Finalq + Finalt);
-Mpgrade = Math.round(100*Mpgrade)/(100);
-Finalmpgrade = Mpgrade.toLocaleString("en", {minimumFractionDigits:2, maximumFractionDigits:2});
+let mpGrade = (finalHw + finalQ + finalT);
+mpGrade = Math.round(100*mpGrade)/(100);
+finalMpGrade = mpGrade.toLocaleString("en", {minimumFractionDigits:2, maximumFractionDigits:2});
 
-console.log("\nYour marking period grade is " + Finalmpgrade + "%.\n")
+console.log("\nYour marking period grade is " + finalMpGrade + "%.\n")
