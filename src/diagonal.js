@@ -1,4 +1,3 @@
-
 const readlineSync = require("readline-sync");
 
 let widthIn = Number(readlineSync.question("\nWidth: "));
