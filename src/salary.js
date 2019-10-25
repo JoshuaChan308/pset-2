@@ -14,7 +14,7 @@ const TOTAL_TAXES = FEDERAL_INCOME_TAX+STATE_INCOME_TAX+SOCIAL_SECURITY_TAX+MEDI
 const ANNUAL_SALARY_PRETAX = ANNUAL_SALARY_CHECK - (PRE_TAX*ANNUAL_SALARY_CHECK)
 const ANNUAL_SALARY_TAX = ANNUAL_SALARY_PRETAX - (TOTAL_TAXES*ANNUAL_SALARY_PRETAX)
 
-const ANNUAL_SALARY_TAXES_DECIMALS= ANNUAL_SALARY_TAX.toLocaleString("en", {minimumFractionDigits:2, maximumFractionDigits:2});
+const DECIMALS= ANNUAL_SALARY_TAX.toLocaleString("en", {minimumFractionDigits:2, maximumFractionDigits:2});
 
 
-console.log("\nYour take-home pay each check will be $" + ANNUAL_SALARY_TAXES_DECIMALS + ".")
+console.log("\nYour take-home pay each check will be $" + DECIMALS + ".")
